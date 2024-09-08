@@ -1,0 +1,73 @@
+-- Inserting data into users table
+INSERT INTO users (user_id, username, password, role, user_created_at) VALUES
+    (1, "John Doe", "password123", "customer", "2023-09-01"),
+    (2, "Jane Smith", "password456", "customer", "2023-09-05"),
+    (3, "Michael Brown", "password789", "customer", "2023-09-10"),
+    (4, "Emily Davis", "pass987", "customer", "2023-09-15"),
+    (5, "David Wilson", "abc123", "customer", "2023-09-18"),
+    (6, "Olivia Johnson", "pwd987", "customer", "2023-09-22"),
+    (7, "Lucas Lee", "passpass", "customer", "2023-09-25"),
+    (8, "Sophia Miller", "12345abc", "customer", "2023-09-30"),
+    (9, "James Garcia", "pass333", "customer", "2023-10-02"),
+    (10, "Ava Martinez", "secret123", "customer", "2023-10-05");
+
+-- Inserting data into suppliers table
+INSERT INTO suppliers (supplier_id, name, contact_name, contact_email, contact_phone, supplier_created_at) VALUES
+    (1, "ABC Supplies", "John Adams", "contact@abc.com", "555-1234", "2023-09-01"),
+    (2, "XYZ Distributors", "Jane Roberts", "sales@xyz.com", "555-5678", "2023-09-02"),
+    (3, "Global Goods", "Bill Wilson", "info@globalgoods.com", "555-9876", "2023-09-03"),
+    (4, "Local Vendors", "Mike Anderson", "support@localvendors.com", "555-4321", "2023-09-04"),
+    (5, "Premium Parts", "Mary Jackson", "sales@premiumparts.com", "555-2468", "2023-09-05"),
+    (6, "FastTrack Supplies", "Robert Johnson", "info@fasttrack.com", "555-7531", "2023-09-06"),
+    (7, "Reliable Goods", "Tom Harris", "contact@reliable.com", "555-3698", "2023-09-07"),
+    (8, "Innovative Solutions", "Emma Thompson", "info@innovative.com", "555-8523", "2023-09-08"),
+    (9, "Elite Distributors", "Henry Brown", "sales@elite.com", "555-1597", "2023-09-09"),
+    (10, "Budget Suppliers", "Daniel Smith", "support@budget.com", "555-7539", "2023-09-10");
+
+-- Inserting data into categories table
+INSERT INTO categories (category_id, name, description, category_created_at) VALUES
+    (1, "Electronics", "Electronic items", "2023-09-01"),
+    (2, "Office Supplies", "Office stationery", "2023-09-02"),
+    (3, "Furniture", "Office and home furniture", "2023-09-03"),
+    (4, "Groceries", "Daily groceries", "2023-09-04"),
+    (5, "Clothing", "Clothing and apparel", "2023-09-05"),
+    (6, "Sports Equipment", "Sports gear", "2023-09-06"),
+    (7, "Tools", "Hardware tools", "2023-09-07"),
+    (8, "Health & Beauty", "Beauty products", "2023-09-08"),
+    (9, "Toys & Games", "Toys and games for kids", "2023-09-09"),
+    (10, "Automotive", "Automotive parts", "2023-09-10");
+
+-- Inserting data into products table
+INSERT INTO products (product_id, name, description, price, category_id, supplier_id, product_created_at) VALUES
+    (1, "Laptop", "A high-performance laptop", 999.99, 1, 1, "2023-09-01"),
+    (2, "Printer", "An inkjet printer", 199.99, 2, 2, "2023-09-02"),
+    (3, "Desk", "Office desk", 150.00, 3, 1, "2023-09-03"),
+    (4, "Chair", "Ergonomic office chair", 85.50, 3, 1, "2023-09-04"),
+    (5, "Notebook", "Spiral notebook", 3.50, 2, 2, "2023-09-05"),
+    (6, "Pen Set", "Luxury pen set", 9.99, 2, 2, "2023-09-06"),
+    (7, "T-shirt", "Cotton t-shirt", 19.99, 5, 3, "2023-09-07"),
+    (8, "Tennis Racket", "Pro tennis racket", 75.99, 6, 4, "2023-09-08"),
+    (9, "Hammer", "Heavy-duty hammer", 12.99, 7, 5, "2023-09-09"),
+    (10, "Shampoo", "Organic shampoo", 5.50, 8, 6, "2023-09-10");
+
+-- Inserting data into orders table
+INSERT INTO orders (order_id, user_id, order_date, status, total) VALUES
+    (1, 1, "2024-01-15", "Shipped", 1200.50),
+    (2, 2, "2024-01-20", "Processing", 500.00),
+    (3, 3, "2024-02-05", "Delivered", 320.25),
+    (4, 4, "2024-02-10", "Cancelled", 0.00);
+
+-- Inserting data into order_items table
+INSERT INTO order_items (order_item_id, order_id, product_id, quantity, price) VALUES
+    (1, 1, 1, 2, 999.99),
+    (2, 1, 5, 10, 3.50),
+    (3, 2, 3, 1, 150.00),
+    (4, 2, 7, 2, 19.99),
+    (5, 3, 4, 4, 85.50);
+
+-- Inserting data into reviews table
+INSERT INTO reviews (review_id, product_id, user_id, rating, comment, created_at) VALUES
+    (1, 1, 1, 5, "Great product! Highly recommended.", "2024-01-20"),
+    (2, 2, 2, 4, "Works well, but could be cheaper.", "2024-01-25"),
+    (3, 3, 3, 3, "Decent, but the quality could be better.", "2024-02-01"),
+    (4, 4, 4, 5, "Comfortable chair!", "2024-02-10");
